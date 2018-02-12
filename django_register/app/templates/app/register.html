@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+    <div class="main-form">
+        <h1>注册页面</h1>
+    <div class="form-header">
+        <a href="{% url 'login' %}" class="method-select">会员登录</a>
+    </div>
+    <form class="login" action="/app/register/" method="POST" id="login-submit">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="text" id="email" name="email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="password">密码</label>
+            <input type="password" id="password" name="password" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="check_code">验证码</label>
+            <input type="text" id="check_code" name="check_code" class="form-control">
+            <img id="img-code" onclick="change_code()" title="点击更换验证码" src="/app/check_code/">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 13px">
+            {{msg}}
+        </div>
+        <div class="form-group">
+            <div class="submit">
+                <input type="submit" value="注册" class="submit">
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    function change_code() {
+        var code = document.getElementById('img-code');
+        code.src += '?';
+    }
+</script>
+</body>
+</html>

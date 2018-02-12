@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    首页
+    {% if user_ext %}
+        {{user_ext.user_name}} <br>
+        <img src="{{user_ext.head_img_url}}" alt="">
+        <a href="{% url 'logout' %}">退出登录</a>
+    {% else %}
+    <a href="{% url 'login' %}">登录</a>
+    {% endif %}
+</body>
+</html>
