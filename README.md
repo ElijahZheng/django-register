@@ -15,6 +15,7 @@ check_code
 
 # directory
 
+```
 ├── Library
 │   └── Fonts
 │       └── Monaco.ttf
@@ -48,6 +49,7 @@ check_code
 ├── requirements.txt
 └── uploads
     └── default-user.png
+```
 
 # django 注册 登录 以及验证码示例
 django register demo
@@ -65,6 +67,7 @@ pip3 install -r requirements.txt
 验证码
 
 # 文件目录
+```
 ├── Library
 │   └── Fonts
 │       └── Monaco.ttf
@@ -98,3 +101,4 @@ pip3 install -r requirements.txt
 ├── requirements.txt
 └── uploads
     └── default-user.png
+```
